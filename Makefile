@@ -1,5 +1,5 @@
 # Makefile for convenience
-.PHONY: base-image base-notebook pangeo-notebook ml-notebook
+.PHONY: base-image base-notebook pangeo-notebook ml-notebook climacell-notebook
 TESTDIR=/srv/test
 
 base-image :
@@ -23,3 +23,9 @@ ml-notebook : base-image
 	../update_lockfile.sh condarc.yml; \
 	docker build -t pangeo/ml-notebook:master . ; \
 	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) pangeo/ml-notebook:master ./run_tests.sh ml-notebook
+
+climacell-notebook : base-image
+	cd climacell-notebook ; \
+	../update_lockfile.sh condarc.yml; \
+	docker build -t pangeo/climacell-notebook:master . ; \
+	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) pangeo/climacell-notebook:master ./run_tests.sh ml-notebook

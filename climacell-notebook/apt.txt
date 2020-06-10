@@ -1,0 +1,4 @@
+git
+graphviz
+emacs25
+vim

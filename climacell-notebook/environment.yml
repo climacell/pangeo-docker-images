@@ -1,0 +1,91 @@
+name: pangeo
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7*
+  - pangeo-notebook=2020.06.10
+  # - nomkl
+  # core scipy packages
+  - dask-gateway==0.7.1
+  - numpy
+  - scipy
+  - matplotlib-base
+  - pandas
+  - xarray
+  # - sparse
+  # - sympy
+  # data science stuff
+  - scikit-image
+  - scikit-learn
+  - dask-ml
+  # pyviz
+  - holoviews
+  - panel
+  - jupyter-panel-proxy
+  - geoviews
+  - hvplot
+  - datashader
+  - seaborn
+  # - altair
+  # - descartes
+  # - folium
+  # - vega
+  # - vega_datasets
+  - cmocean
+  # geospatial
+  # - iris
+  - cartopy
+  # - basemap
+  - geopandas
+  - rasterio
+  - netcdf4
+  - erddapy
+  - pydap
+  - h5py
+  - h5netcdf
+  - pynio
+  - regionmask
+  - rio-cogeo
+  # geoscience-related
+  # - climlab
+  - metpy
+  - satpy
+  # - gsw
+  - esmpy
+  - xesmf
+  # - windspharm
+  # intake-related
+  - intake
+  - intake-xarray
+  - intake-esm
+  - fsspec
+  - intake-stac
+  - sat-stac
+  - sat-search
+  # zarr-related
+  - zarr
+  - numcodecs
+  - python-blosc
+  - lz4
+  - gcsfs>=0.5.2
+  - s3fs
+  - tiledb-py
+  # jupyter-related
+  - ipyleaflet
+  # - watermark
+  # xarray-related
+  - xgcm
+  - xrft
+  - xhistogram
+  - xlrd
+  # - xrviz
+  # - climpred
+  # - pytide
+  - pyinterp
+  # misc
+  - python-wget
+  - prefect
+  # - pip:
+  #   - intake_geopandas
+  #   - git+https://github.com/NCAR/intake-esm.git@master
+  #   - git+https://github.com/hhuangwx/cmaps.git#egg=cmaps
