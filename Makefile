@@ -27,5 +27,5 @@ ml-notebook : base-image
 climacell-notebook : base-image
 	cd climacell-notebook ; \
 	../update_lockfile.sh condarc.yml; \
-	docker build -t pangeo/climacell-notebook:master . ; \
-	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) pangeo/climacell-notebook:master ./run_tests.sh ml-notebook
+	docker build -t us.gcr.io/climacell-research/climacell-notebook:master . ; \
+	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) us.gcr.io/climacell-research/climacell-notebook:master ./run_tests.sh climacell-notebook
