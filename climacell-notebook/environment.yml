@@ -26,6 +26,7 @@ dependencies:
   - hvplot
   - datashader
   - seaborn
+  - yellowbrick
   # - altair
   # - descartes
   # - folium
@@ -83,6 +84,8 @@ dependencies:
   # - pytide
   - pyinterp
   # misc
+  - fastparquet
+  - pyarrow
   - python-wget
   - prefect
   # - pip:
