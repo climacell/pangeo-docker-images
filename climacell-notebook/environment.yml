@@ -3,92 +3,65 @@ channels:
   - conda-forge
 dependencies:
   - python=3.7*
-  - pangeo-notebook=2020.06.10
-  # - nomkl
-  # core scipy packages
-  - dask-gateway==0.7.1
-  - numpy
-  - scipy
+  - pangeo-notebook=2020.06.19
+  - pip=20
+  - cartopy
+  - ciso
+  - cmocean
+  - dask-ml
+  - datashader
+  - descartes
+  - fastparquet
+  - fsspec
+  - gcsfs
+  - geopandas
+  - geoviews-core
+  - h5netcdf
+  - h5py
+  - holoviews
+  - hvplot
+  - intake
+  - intake-esm
+  - intake-geopandas
+  - intake-stac
+  - intake-xarray
+  - ipyleaflet
+  - ipywidgets
+  - jupyter-panel-proxy
+  - lz4
   - matplotlib-base
+  - metpy
+  - nc-time-axis
+  - netcdf4
+  - nomkl
+  - numcodecs
+  - numpy
   - pandas
-  - xarray
-  # - sparse
-  # - sympy
-  # data science stuff
+  - panel
+  - prefect
+  - pyarrow
+  - pydap
+  - python-blosc
+  - rasterio
+  - rio-cogeo
+  - s3fs
+  - sat-search
+  - sat-stac
+  - satpy
   - scikit-image
   - scikit-learn
-  - dask-ml
-  # pyviz
-  - holoviews
-  - panel
-  - jupyter-panel-proxy
-  - geoviews
-  - hvplot
-  - datashader
+  - scipy
   - seaborn
-  - yellowbrick
-  # - altair
-  # - descartes
-  # - folium
-  # - vega
-  # - vega_datasets
-  - cmocean
-  # geospatial
-  # - iris
-  - cartopy
-  # - basemap
-  - geopandas
-  - rasterio
-  - netcdf4
-  - erddapy
-  - pydap
-  - h5py
-  - h5netcdf
-  - pynio
-  - regionmask
-  - rio-cogeo
-  # geoscience-related
-  # - climlab
-  - metpy
-  - satpy
-  # - gsw
-  - esmpy
-  - xesmf
-  # - windspharm
-  # intake-related
-  - intake
-  - intake-xarray
-  - intake-esm
-  - fsspec
-  - intake-stac
-  - sat-stac
-  - sat-search
-  # zarr-related
-  - zarr
-  - numcodecs
-  - python-blosc
-  - lz4
-  - gcsfs>=0.5.2
-  - s3fs
+  - sparse
   - tiledb-py
-  # jupyter-related
-  - ipyleaflet
-  # - watermark
-  # xarray-related
+  - xarray
+  - xcape
+  - xesmf
   - xgcm
-  - xrft
   - xhistogram
-  - xlrd
-  # - xrviz
-  # - climpred
-  # - pytide
-  - pyinterp
-  # misc
-  - fastparquet
-  - pyarrow
-  - python-wget
-  - prefect
-  # - pip:
-  #   - intake_geopandas
-  #   - git+https://github.com/NCAR/intake-esm.git@master
-  #   - git+https://github.com/hhuangwx/cmaps.git#egg=cmaps
+  - xlayers
+  - xmitgcm
+  - xpublish
+  - xrft
+  - yellowbrick
+  - zarr
