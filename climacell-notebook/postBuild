@@ -1,8 +1,8 @@
 #!/bin/bash
-jupyter labextension install --clean \
+jupyter labextension install --clean --minimize=False \
                              @jupyter-widgets/jupyterlab-manager \
                              @pyviz/jupyterlab_pyviz \
                              dask-labextension \
-                             jupyter-leaflet #\
-                             #@jupyterlab/toc 
+                             jupyter-leaflet \
+                             @jupyterlab/toc 
 #EOF
