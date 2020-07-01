@@ -2,7 +2,7 @@
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 
-export PANGEO_ENV="ml-notebook"
+export PANGEO_ENV="climacell-notebook"
 
 # ==== ONLY EDIT WITHIN THIS BLOCK =====
 

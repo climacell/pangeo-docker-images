@@ -5,6 +5,7 @@ dependencies:
   - python=3.7*
   - pangeo-notebook=2020.06.19
   - pip=20
+  - bokeh>=2.1.1
   - cartopy
   - ciso
   - cmocean
@@ -63,5 +64,4 @@ dependencies:
   - xmitgcm
   - xpublish
   - xrft
-  - yellowbrick
   - zarr

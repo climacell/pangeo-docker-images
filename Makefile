@@ -26,6 +26,9 @@ ml-notebook : base-image
 
 climacell-notebook : base-image
 	cd climacell-notebook ; \
-	../update_lockfile.sh condarc.yml; \
-	docker build -t us.gcr.io/climacell-research/climacell-notebook:master . ; \
-	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) us.gcr.io/climacell-research/climacell-notebook:master ./run_tests.sh climacell-notebook
+	docker build -t us.gcr.io/climacell-research/climacell-notebook:latest . ; \
+	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) us.gcr.io/climacell-research/climacell-notebook:latest ./run_tests.sh climacell-notebook
+
+climacell-notebook-gc : 
+	cd climacell-notebook 
+	gcloud builds submit --async --timeout=1200 --tag us.gcr.io/climacell-research/climacell-notebook:latest ;
