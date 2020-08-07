@@ -1,10 +1,18 @@
 # Makefile for convenience
-.PHONY: base-image base-notebook pangeo-notebook ml-notebook climacell-notebook
+.PHONY: base-image climacell-base base-notebook pangeo-notebook ml-notebook climacell-notebook
 TESTDIR=/srv/test
+pypi_file ?= ~/.pip/pip.conf
 
 base-image :
 	cd base-image ; \
 	docker build -t pangeo/base-image:master .
+
+climacell-base :
+	cd climacell-base ; \
+	docker build -t us.gcr.io/climacell-research/climacell-base:latest --build-arg PYPI_FILE="`cat $(pypi_file)`" . ;
+
+push-climacell-base : climacell-base
+	docker push us.gcr.io/climacell-research/climacell-base:latest
 
 base-notebook : base-image
 	cd base-notebook ; \
@@ -24,7 +32,7 @@ ml-notebook : base-image
 	docker build -t pangeo/ml-notebook:master . ; \
 	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) pangeo/ml-notebook:master ./run_tests.sh ml-notebook
 
-climacell-notebook : base-image
+climacell-notebook : climacell-base
 	cd climacell-notebook ; \
 	docker build -t us.gcr.io/climacell-research/climacell-notebook:latest . ; \
 	docker run -w $(TESTDIR) -v $(PWD):$(TESTDIR) us.gcr.io/climacell-research/climacell-notebook:latest ./run_tests.sh climacell-notebook

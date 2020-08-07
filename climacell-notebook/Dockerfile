@@ -1,1 +1,1 @@
-FROM pangeo/base-image:master
+FROM us.gcr.io/climacell-research/climacell-base:latest
