@@ -9,7 +9,7 @@ base-image :
 
 climacell-base :
 	cd climacell-base ; \
-	docker build -t us.gcr.io/climacell-research/climacell-base:latest --build-arg PYPI_FILE="`cat $(pypi_file)`" . ;
+	docker build --no-cache -t us.gcr.io/climacell-research/climacell-base:latest --build-arg PYPI_FILE="`cat $(pypi_file)`" . ;
 
 push-climacell-base : climacell-base
 	docker push us.gcr.io/climacell-research/climacell-base:latest
