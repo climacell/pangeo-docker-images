@@ -39,4 +39,4 @@ climacell-notebook : climacell-base
 
 climacell-notebook-gc : 
 	cd climacell-notebook 
-	gcloud builds submit --async --timeout=1200 --tag us.gcr.io/climacell-research/climacell-notebook:latest ;
+	gcloud builds submit --async --machine-type=n1-highcpu-8 --timeout=2400 --tag us.gcr.io/climacell-research/climacell-notebook:latest ;
