@@ -40,7 +40,7 @@ dependencies:
   - numpy
   - pandas
   - panel
-  - prefect
+  - prefect==0.13.16
   - pyarrow
   - pydap
   - pynio
